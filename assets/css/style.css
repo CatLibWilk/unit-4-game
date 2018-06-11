@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    overflow: auto;
+  }
+
+h1{
+    font-size: 44px;
+    font-family: 'Days One', sans-serif;
+    color: coral;
+    text-align: right;
+    padding-right: 75px;
+
+}
+
+.background{
+    background-image: url('../images/naboo.jpg');
+    height: 900px;
+    width: 1500px;
+    background-size: cover;
+}
