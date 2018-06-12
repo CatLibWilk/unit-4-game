@@ -22,7 +22,7 @@
                 </section><!--heading section ender-->
                 <section id="game-area">
                    <div class="container-fluid pl-5">
-                        <div id="characters-row" class="row">
+                        <div id="characters-row" class="row"><!--also includes defend col and fight text for layout purposes-->
                             <div id="characters-stable" class="col-10 float-left">
 
 
@@ -35,10 +35,22 @@
                                 <h2>Your Character</h2>
 
                             </div><!--chosen-character end-->
+                            <div class="col-4 mx-auto">
+                                <div id="defender" class="mx-auto p-5">
+                                <h2>Defender</h2>
+                                </div><!--defender end-->
+                                <p id="attackStatement"></p>
+                                <p id="counterAttackStatement"></p>
+                             </div>
+
+                        
+                            
+                                
+                          
                         </div><!--chosen-char-row end-->
 
 
-                        <div id="enemies-available-row" class="row">
+                        <div id="enemies-available-row" class="row mt-4">
                            <div id="enemies-available" class="float-left">
                                 <h2>Enemies Available to Attack</h2>
 
@@ -49,20 +61,12 @@
                        <div id="fight-section-row" class="row">
                             <div id="fight-section" class="col-4 float-left">
                                 <h2>Get It On!</h2>
-                                <div class="btn btn-warning">Attack</div>
+                                <div id="attack-btn" class="btn btn-warning">Attack</div>
                             </div><!--fight-section-end-->
                         </div><!--fight-section row end-->
 
-                    <div id="defender-row" class="row">
-                            <div id="defender" class="float-left">
-                                <h2>Defender</h2>
-                            </div><!--defender end-->
-                        </div><!--defender-row end-->
 
-                        <div id="fight-text-row" class="row">
-                            <div id="fight-text" class="float-left">
-
-                            </div>
+                            
 
                         </div><!--fight-text-row end-->
                     </div><!--main container end-->

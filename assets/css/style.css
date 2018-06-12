@@ -2,7 +2,7 @@
     box-sizing: border-box;
     /* text-align: center; */
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
   }
   
   .clearfix::after {
@@ -31,4 +31,9 @@ h1{
 .charImg{
     width: 150px;
     height: 125px;
+}
+
+.charBox{
+    min-height: 200px;
+    min-width: 190px;
 }
