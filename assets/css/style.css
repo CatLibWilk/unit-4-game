@@ -27,3 +27,8 @@ h1{
     width: 1500px;
     background-size: cover;
 }
+
+.charImg{
+    width: 150px;
+    height: 125px;
+}
