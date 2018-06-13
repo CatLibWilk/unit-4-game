@@ -157,8 +157,8 @@ function fightFunct(){
 
 
         roundCounter++;
-        console.log(roundCounter);
-    }
+        
+   
     if(userChar.health_points<1){
         alert("you lose");
         //window.location.reload(true);save this for when the game is ultimately won/lost, wrap in function and set off with setTimeout
@@ -182,6 +182,6 @@ function fightFunct(){
             attackStatement.text("You've defeated all your enemies, " + userChar.character_name + ". You truly were in Star Wars: The Phantom Menace.");
         }
     }
-
-
+console.log(fightReady, enemySelected, winCount);
+    }   
 }
