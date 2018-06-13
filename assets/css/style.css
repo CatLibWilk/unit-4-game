@@ -2,7 +2,11 @@
     box-sizing: border-box;
     /* text-align: center; */
     overflow-x: hidden;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
+  }
+  p{
+      font-size: 20px;
+      font-weight: bold;
   }
   
   .clearfix::after {

@@ -70,7 +70,7 @@ function selectUserChar(){
     var charID = $(this).attr("characterID");
     // console.log(charID);
     var charBox = $("<div>");
-        charBox.attr("class", "col float-left bg-warning charBox m-1  p-2 text-center");
+        charBox.attr("class", "col-2 float-left bg-warning charBox m-1  p-2 text-center");
         charBox.attr("userId", characters[charID].charactKey);
         var thumb = $("<img class='img img-thumbnail charImg mx-auto d-block'>");
         thumb.attr("src", characters[charID].character_image);
@@ -114,7 +114,7 @@ function selectDefender(){
     if(enemySelected === false){
         var charID = $(this).attr("characterID");
         var charBox = $("<div>");
-        charBox.attr("class", "col bg-dark text-white defendCharBox charBox m-1  p-2 text-center"); 
+        charBox.attr("class", "col-2 bg-dark text-white defendCharBox charBox m-1 mb-5 p-2 text-center"); 
         charBox.attr("userId", characters[charID].charactKey);
         var thumb = $("<img class='img img-thumbnail charImg mx-auto d-block'>");
         thumb.attr("src", characters[charID].character_image);
@@ -146,6 +146,7 @@ function fightFunct(){
         enemyChar.health_points = enemyChar.health_points - (userChar.attack_power * roundCounter);
         $("#enemy-health-text").text(enemyChar.health_points);
         attackStatement = $("#attackStatement");
+        attackStatement.attr("class", "text-light");
         attackStatement.text("You attacked " + enemyChar.character_name + " for " + (userChar.attack_power * roundCounter) + " damage.");
         ///counter attack///
         userChar.health_points = userChar.health_points - enemyChar.counter_attack_power;
@@ -174,6 +175,7 @@ function fightFunct(){
         fightReady = false;
         counterAttackStatement.empty();
         attackStatement.text("You have defeated " + enemyChar.character_name + ". Please select another enemy.");
+        attackStatement.attr("class", "text-dark");
         
         if(winCount === 3){
             alert("game won");

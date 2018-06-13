@@ -11,70 +11,68 @@
             
             <title></title>
             
- </head>
-
-        </head>
+ </head></head>
 
         <body>
             <div class="background">
-                <section id="title">
-                    <h1>Star Wars The Phantom Menace The Game</h1>
-                </section><!--heading section ender-->
-                <section id="game-area">
-                   <div class="container-fluid pl-5">
-                        <div id="characters-row" class="row"><!--also includes defend col and fight text for layout purposes-->
-                            <div id="characters-stable" class="col-10 float-left">
+            <section id="title">
+                <h1>Star Wars The Phantom Menace The Game</h1>
+            </section><!--heading section ender-->
 
+            <section id="game-area">
+                <div class="container-fluid pr-5">   
+                    <div class="main-row">
+                        <div id="left-column" class="col-8 clearfix float-left">
+                            <div id="characters-subrow" class="row">
+                                <div id="characters-stable" class="col float-left">
+        
+        
+                                </div><!--character-stable end-->
+                            </div><!--character-stable row end-->
+                            <div id="chosen-character-row" class="row">
+                                <div id="chosen-character" class="col float-left">
+                                        <h2>Your Character</h2>
+        
+                                </div><!--chosen-character end-->
+                            </div><!--chosen subrow end-->
 
-                            </div><!--character-stable end-->
-                        </div><!--character-stable row end-->
+                            <div id="enemies-available-subrow" class="row mt-4">
+                                <div id="enemies-available" class="float-left">
+                                    <h2>Enemies Available to Attack</h2>
+         
+                                </div><!--enemies-available-col-end-->
+                            </div><!--enemies-available-subrow end--> 
+                            <div id="fight-section-subrow" class="row">
+                                <div id="fight-section" class="col-4 float-left p-0">
+                                    <h2>Get It On!</h2>
+                                        <div id="attack-btn" class="btn btn-warning">Attack</div>
+                                </div><!--fight-section-end-->
+                            </div><!--fight-section row end--> 
+                        </div><!--left column end-->
 
+<!--/////////////////////////////column divide///////////////////////////////////////////////////////////////////////-->
 
-                        <div id="chosen-character-row" class="row">
-                            <div id="chosen-character" class="float-left">
-                                <h2>Your Character</h2>
-
-                            </div><!--chosen-character end-->
-                            <div class="col-4 mx-auto">
-                                <div id="defender" class="mx-auto p-5">
-                                <h2>Defender</h2>
-                                </div><!--defender end-->
-                                <p id="attackStatement"></p>
-                                <p id="counterAttackStatement"></p>
-                             </div>
-
-                        
-                            
-                                
-                          
-                        </div><!--chosen-char-row end-->
-
-
-                        <div id="enemies-available-row" class="row mt-4">
-                           <div id="enemies-available" class="float-left">
-                                <h2>Enemies Available to Attack</h2>
-
-                            </div><!--enemies-available-end-->
-                        </div><!--enemies-available-row end-->
-
-
-                       <div id="fight-section-row" class="row">
-                            <div id="fight-section" class="col-4 float-left">
-                                <h2>Get It On!</h2>
-                                <div id="attack-btn" class="btn btn-warning">Attack</div>
-                            </div><!--fight-section-end-->
-                        </div><!--fight-section row end-->
-
-
-                            
-
-                        </div><!--fight-text-row end-->
-                    </div><!--main container end-->
-
-                </section><!--end of game-area section-->
-
-              
-            </div><!--bg div end-->
+                        <div id="right-column" class="col-4 clearfix ml-auto">
+                            <div class="row">
+                                <div id="defender-row">
+                                    <div id="defender" class="col float-left">
+                                        <h2>Defender</h2>
+                                    
+                                    </div><!--defender col end-->
+                                </div><!--defender row end-->
+                                <div id="fight-updates-row">
+                                    <div id="fight-updates-col" class="col float-left mt-5 pr-5 d-block">
+                                        <p id="attackStatement" class="text-light"></p>
+                                        <p id="counterAttackStatement" class="text-light"></p>
+                                    </div><!--fight-updates-col end-->
+                                </div><!--fight-updates-row end-->
+                            </div><!--defender row end-->
+                        </div><!--right column end-->
+                    </div><!--overall row end-->
+                </div><!--main-container end-->
+            </section>
+            </div><!--bg-div-end-->
+                
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
             
     <script src="assets/javascript/game.js"></script>
