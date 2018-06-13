@@ -19,7 +19,8 @@
 h1{
     font-size: 44px;
     font-family: 'Days One', sans-serif;
-    color: coral;
+    color: #FFE925;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     text-align: right;
     padding-right: 75px;
 
@@ -40,4 +41,9 @@ h1{
 .charBox{
     min-height: 200px;
     min-width: 190px;
+}
+
+#successful-gif{
+    height: 650px;
+    width: auto;
 }

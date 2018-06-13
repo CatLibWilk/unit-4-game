@@ -160,12 +160,11 @@ function fightFunct(){
         
    
     if(userChar.health_points<1){
-        alert("you lose");
         //window.location.reload(true);save this for when the game is ultimately won/lost, wrap in function and set off with setTimeout
+        fightReady = false;
+        $("#game-title").text("You Lose!!!!!!!");
         setTimeout(gameOver, 3000);
-        function gameOver(){
-            window.location.reload(true);
-        }
+
     }
     if(enemyChar.health_points<1){
 
@@ -178,10 +177,24 @@ function fightFunct(){
         attackStatement.attr("class", "text-dark");
         
         if(winCount === 3){
-            alert("game won");
             attackStatement.text("You've defeated all your enemies, " + userChar.character_name + ". You truly were in Star Wars: The Phantom Menace.");
+            successGif();
         }
     }
-console.log(fightReady, enemySelected, winCount);
+console.log(fightReady, winCount);
     }   
+}
+
+function successGif(){
+    $("#game-title").text("You Win!!!!!!!");
+    var gifDiv = $("<div class='text-center mt-5 mb-5'>");
+    var gifImg = $("<img class = 'img-rounded mx-auto' src='https://media.giphy.com/media/G5qMQkMqIC3ja/giphy.gif'>");
+    gifImg.attr("id", "successful-gif");
+    gifDiv.append(gifImg);
+    $("#success-div").append(gifDiv);
+    setTimeout(gameOver, 5000);
+}
+
+function gameOver(){
+    window.location.reload(true);
 }
