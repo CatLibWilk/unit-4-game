@@ -4,33 +4,33 @@ var characters = [
     {
         "charactKey": 0,
         "character_name": "Swarm of Midichlorian-infused Bees", 
-        "health_points": 200, 
-        "attack_power": 8, 
+        "health_points": 180, 
+        "attack_power": 15, 
         "counter_attack_power": 25,
         "character_image": "assets/images/midiclor.jpg"
     },
     {
         "charactKey":1,
         "character_name": "Watto", 
-        "health_points": 100, 
-        "attack_power": 4, 
-        "counter_attack_power": 10,
+        "health_points": 110, 
+        "attack_power": 12, 
+        "counter_attack_power": 20,
         "character_image": "assets/images/watto.png"
     },
     {
         "charactKey":2,
         "character_name": "Anakin", 
         "health_points": 180, 
-        "attack_power": 10, 
-        "counter_attack_power": 15,
+        "attack_power": 15, 
+        "counter_attack_power": 25,
         "character_image": "assets/images/anakin.jpg"
     },
     {
         "charactKey":3,
         "character_name": "Sebulba", 
-        "health_points": 150, 
-        "attack_power": 5, 
-        "counter_attack_power": 12,
+        "health_points": 130, 
+        "attack_power": 15, 
+        "counter_attack_power": 30,
         "character_image": "assets/images/sebulba.png"
     }
 ]
@@ -141,18 +141,20 @@ $("#attack-btn").on("click", fightFunct);
 
 function fightFunct(){
     if(fightReady === true){
-           
+        
+        
+       
         ///attack///
-        enemyChar.health_points = enemyChar.health_points - (userChar.attack_power * roundCounter);
-        $("#enemy-health-text").text(enemyChar.health_points);
-        attackStatement = $("#attackStatement");
-        attackStatement.attr("class", "text-light");
-        attackStatement.text("You attacked " + enemyChar.character_name + " for " + (userChar.attack_power * roundCounter) + " damage.");
+            enemyChar.health_points = enemyChar.health_points - (userChar.attack_power * roundCounter);
+            $("#enemy-health-text").text(enemyChar.health_points);
+            attackStatement = $("#attackStatement");
+            attackStatement.attr("class", "text-light");
+            attackStatement.text("You attacked " + enemyChar.character_name + " for " + (userChar.attack_power * roundCounter) + " damage.");
         ///counter attack///
-        userChar.health_points = userChar.health_points - enemyChar.counter_attack_power;
-        $("#user-health-text").text(userChar.health_points);
-        counterAttackStatement = $("#counterAttackStatement");
-        counterAttackStatement.text(enemyChar.character_name + " attacked you back for " + enemyChar.counter_attack_power + " damage.");
+            userChar.health_points = userChar.health_points - enemyChar.counter_attack_power;
+            $("#user-health-text").text(userChar.health_points);
+            counterAttackStatement = $("#counterAttackStatement");
+            counterAttackStatement.text(enemyChar.character_name + " attacked you back for " + enemyChar.counter_attack_power + " damage.");
 
 
 
@@ -182,7 +184,14 @@ function fightFunct(){
         }
     }
 console.log(fightReady, winCount);
-    }   
+    }else{
+        attackStatement.text("Players must be selected before the fight can begin.")
+        attackStatement.attr("class", "text-dark");
+        setTimeout(clear, 3000);
+        function clear(){
+            attackStatement.empty();
+        }
+    }
 }
 
 function successGif(){
